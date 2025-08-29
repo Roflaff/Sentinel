@@ -1,0 +1,5 @@
+from unittest import TestCase
+
+class TestAPI(TestCase):
+    def test_example(self):
+        self.assertEqual(1, 1)
