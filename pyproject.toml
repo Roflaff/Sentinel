@@ -10,7 +10,8 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "prometheus-client (>=0.22.1,<0.23.0)",
-    "docker (>=7.1.0,<8.0.0)"
+    "docker (>=7.1.0,<8.0.0)",
+    "fastapi (>=0.116.1,<0.117.0)"
 ]
 
 
