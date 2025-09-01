@@ -4,7 +4,10 @@
 
 ## 아키텍처
 
-프로젝트의 전체 아키텍처는 `docs/architecture.png` 파일에서 확인할 수 있습니다.
+<p align="center">
+  <img src="./docs/architecture.png" alt="Sentinel Architecture" width="600"/>
+</p>
+
 
 ## 선행 조건 (Prerequisites)
 
