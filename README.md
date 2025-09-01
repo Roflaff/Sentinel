@@ -22,7 +22,7 @@
 
 1.  **리포지토리 클론**
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/Roflaff/Sentinel.git
     cd Sentinel
     ```
 
@@ -61,12 +61,14 @@ Prometheus가 수집할 메트릭 소스(타겟)를 변경하려면 `conf/promet
 ```yaml
 scrape_configs:
   - job_name: 'prometheus'
+    metrics_path: /metrics
     static_configs:
       - targets: ['localhost:9090']
   
   # 여기에 새로운 타겟을 추가할 수 있습니다.
   # - job_name: 'my-app'
   #   static_configs:
+  #   metrics_path: /metrics
   #     - targets: ['host.docker.internal:8080']
 ```
 
