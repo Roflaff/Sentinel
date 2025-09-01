@@ -32,4 +32,4 @@ services:
 networks:
   default:
     external: true
-    name: esb-rag_devcontainer_default
+    name: ${EXTERNAL_NETWORK_NAME}
