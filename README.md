@@ -3,6 +3,7 @@
 이 프로젝트는 [Prometheus](https://prometheus.io/)와 [Grafana](https://grafana.com/)를 사용하여 시스템 및 애플리케이션 메트릭을 모니터링하고 시각화하는 대시보드 시스템입니다.
 
 ## 아키텍처
+- Prometheus + Grafana
 
 <p align="center">
   <img src="./docs/architecture.png" alt="Sentinel Architecture" width="600"/>
@@ -28,12 +29,16 @@
 
 2.  **환경 변수 설정**
     프로젝트 루트 디렉터리에 `.env` 파일을 생성하고, `docker-compose.yml`에서 사용할 외부 네트워크 이름을 지정합니다.
+
+    - find network name:
+
     ```bash
     docker network ls
     NETWORK ID     NAME                                        DRIVER    SCOPE
     ...
     ```
     
+    - `.env`:
     ```
     EXTERNAL_NETWORK_NAME=your_external_network_name
     ```
@@ -51,12 +56,14 @@
     *   URL: [http://localhost:19090](http://localhost:19090)
     *   Prometheus 대시보드 및 메트릭 수집 상태를 확인할 수 있습니다.
 
-*   **Grafana**
+*   **Grafana -> MAIN**
     *   URL: [http://localhost:13030](http://localhost:13030)
     *   초기 로그인 정보:
         *   Username: `admin`
         *   Password: `admin`
     *   로그인 후 비밀번호를 변경하는 것을 권장합니다.
+    *   데이터 불러오기 확인 및 대시보드 설정은 다음 링크를 참고합니다.
+    *   Ref: TODO:
 
 ## 설정 (Configuration)
 
