@@ -3,8 +3,8 @@ global:
   evaluation_interval: 5s
 
 scrape_configs:
-  - job_name: node
+
+  - job_name: node-exporter
     metrics_path: /metrics
     static_configs:
-      - targets:
-        - 10.120.201.2:9100
+      - targets: ['172.20.0.2:9100']
