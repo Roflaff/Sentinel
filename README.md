@@ -28,6 +28,12 @@
 
 2.  **환경 변수 설정**
     프로젝트 루트 디렉터리에 `.env` 파일을 생성하고, `docker-compose.yml`에서 사용할 외부 네트워크 이름을 지정합니다.
+    ```bash
+    docker network ls
+    NETWORK ID     NAME                                        DRIVER    SCOPE
+    ...
+    ```
+    
     ```
     EXTERNAL_NETWORK_NAME=your_external_network_name
     ```
@@ -56,14 +62,14 @@
 
 ### Prometheus 타겟 설정
 
-Prometheus가 수집할 메트릭 소스(타겟)를 변경하려면 `conf/prometheus.yml` 파일을 수정하세요.
+Prometheus가 수집할 메트릭 소스(타겟)를 변경하려면 `conf/prometheus.yml` 파일을 수정하세요. 해당 네트워크에서 실행되고 있는 포트에 접근합니다.
 
 ```yaml
 scrape_configs:
-  - job_name: 'prometheus'
+  - job_name: node-exporter
     metrics_path: /metrics
     static_configs:
-      - targets: ['localhost:9090']
+      - targets: ['node-exporter:9090']
   
   # 여기에 새로운 타겟을 추가할 수 있습니다.
   # - job_name: 'my-app'
