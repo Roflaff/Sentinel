@@ -18,6 +18,6 @@ Prometheus와 다양한 Exporter(Node, GPU, Langfuse)를 통해 수집한 메트
 - **시스템 리소스 모니터링**
   - CPU, 메모리, 디스크, 네트워크 상태 (Node Exporter)  
   - GPU 사용량 (DCGM Exporter)  
-  - LLM 실행 메트릭 (Langfuse Exporter)
+  - LLM 실행 메트릭 (Langfuse Exporter) -> link: 
 - **Grafana 대시보드**: 실시간 시각화 및 모니터링
 - **알림 기능 (추가 예정)**: 임계치 초과 시 Slack / Email / Webhook 알림
