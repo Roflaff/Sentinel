@@ -7,8 +7,13 @@ scrape_configs:
   - job_name: node-exporter
     metrics_path: /metrics
     static_configs:
-      - targets: ['node-exporter:9100']
+      - targets: ['${NODE_EXPORTER}']
 
   - job_name: 'cadvisor'
     static_configs:
       - targets: ['cadvisor:8080']
+  
+  - job_name: 'dcgm-exporter'
+    metrics_path: /metrics
+    static_configs:
+      - targets: ['${DCGM_EXPORTER}']

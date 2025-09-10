@@ -6,6 +6,7 @@
 
 # Environment variables
 .env
+env.yml
 
 # volume
 grafana-volume
